@@ -39,7 +39,7 @@
                       echo "<td>$cidade</td>";
                       echo "<td>
                                 <a href='?pg=editar_clientes&id=$id' title='Editar $nome'><span data-feather='edit'></span></a>
-                                <a href='?pg=excluir_clientes&id=$id' title='Excluir $nome'><span data-feather='trash'></span></a>
+                                <a href='?pg=excluir_clientes&id=$id' title='Excluir $nome' onclick='return confirm(\"Deseja Excluir?\")'><span data-feather='trash'></span></a>
                                 <a href='?pg=ver_clientes&id=$id' title='Ver $nome'><span data-feather='search'></span></a>
                             </td>";
                     echo "</tr>";
