@@ -1,6 +1,7 @@
 <?php
   //script que faz aparecer os dados na tela
   include_once 'conectar.php';
+  include_once 'funcoes.php';
   $id = $_GET["id"];
   $sqlConsultaCliente = "SELECT * FROM clientes WHERE id =:id";
   $stmt = $conn->prepare($sqlConsultaCliente);
@@ -25,7 +26,7 @@
         </div>
         <div class="form-group">
           <label for="data_nascimento">Data de Nascimento</label>
-          <input type="text" id="data_nascimento" name="data_nascimento" class="form-control" value="<?= $dadosForm['data_nascimento']?>"  placeholder="99/99/9999" required>
+          <input type="text" id="data_nascimento" name="data_nascimento" class="form-control" maxlength="10" value="<?= dateUSAToBR($dadosForm['data_nascimento'])?>"  placeholder="99/99/9999" required>
         </div>
         <div class="form-group">
           <label for="endereco">Endereço</label>
@@ -71,7 +72,7 @@
        include_once 'conectar.php';
        $nome = $_POST["nome"];
        $cpf = $_POST["cpf"];
-       $dataNascimento = $_POST["data_nascimento"];
+       $dataNascimento = dateBRToUSA($_POST["data_nascimento"]);
        $endereco = $_POST["endereco"];
        $bairro = $_POST["bairro"];
        $complemento = $_POST["complemento"];
