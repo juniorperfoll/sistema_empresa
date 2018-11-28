@@ -17,6 +17,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
@@ -32,11 +33,13 @@
                     $nome = $dadosClientes["nome"];
                     $email = $dadosClientes["email"];
                     $cidade = $dadosClientes["cidade"];
+                    $estado = $dadosClientes["estado"];
                     echo "<tr>";
                       echo "<td>$id</td>";
                       echo "<td>$nome</td>";
                       echo "<td>$email</td>";
                       echo "<td>$cidade</td>";
+                      echo "<td>$estado</td>";
                       echo "<td>
                                 <a href='?pg=editar_clientes&id=$id' title='Editar $nome'><span data-feather='edit'></span></a>
                                 <a href='?pg=excluir_clientes&id=$id' title='Excluir $nome' onclick='return confirm(\"Deseja Excluir?\")'><span data-feather='trash'></span></a>

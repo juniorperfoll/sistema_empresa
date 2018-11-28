@@ -79,7 +79,7 @@
                        ':cidade'=>$cidade,':estado'=>$estado,
                        ':email'=>$email,':telefone'=>$telefone]);
        echo "<script type='text/javascript'>";
-          echo "alert('Cadadastrado com Sucesso!');";
+          echo "alert('Cadastrado com Sucesso!');";
           echo "location.href='?pg=lista_clientes';";
        echo "</script>";
     }
